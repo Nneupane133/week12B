@@ -1,0 +1,100 @@
+============================================================
+ARV HAPLOTYPE / READ-PAIR LINKAGE ANALYSIS REPORT
+BioProject: PRJNA1217582
+Question: Is the AL isolate ONE reassortant or TWO separate viruses?
+============================================================
+
+============================================================
+ANALYSIS 1: Cross-Strain Read Pair Detection
+============================================================
+Read pairs where one mate maps to S1133 and the other to DIV
+indicate the two strain sequences co-occur on the same molecule.
+
+
+  AL (AL Isolate (field) ← KEY)
+    Total pairs classified:       18,757
+    Both S1133:                    8,523
+    Both DIV (divergent):         10,178
+    CROSS-STRAIN pairs:               56  (0.30%)
+    Unmapped / singletons:            41
+    → LOW cross-strain rate (0.3%) — TWO SEPARATE VIRUSES likely
+
+  S1133 (Pure S1133 Control)
+    Total pairs classified:        5,283
+    Both S1133:                    2,774
+    Both DIV (divergent):          2,507
+    CROSS-STRAIN pairs:                2  (0.04%)
+    Unmapped / singletons:             4
+    → LOW cross-strain rate (0.0%) — TWO SEPARATE VIRUSES likely
+
+  P1 (1st CELi Passage)
+    Total pairs classified:       16,542
+    Both S1133:                   11,613
+    Both DIV (divergent):          4,922
+    CROSS-STRAIN pairs:                7  (0.04%)
+    Unmapped / singletons:         8,589
+    → LOW cross-strain rate (0.0%) — TWO SEPARATE VIRUSES likely
+
+  PP3 (3× Plaque Purification)
+    Total pairs classified:       13,232
+    Both S1133:                    8,927
+    Both DIV (divergent):          4,303
+    CROSS-STRAIN pairs:                2  (0.02%)
+    Unmapped / singletons:        14,252
+    → LOW cross-strain rate (0.0%) — TWO SEPARATE VIRUSES likely
+
+  PPP (Post-Purif. CELi)
+    Total pairs classified:       15,200
+    Both S1133:                    7,310
+    Both DIV (divergent):          7,174
+    CROSS-STRAIN pairs:              716  (4.71%)
+    Unmapped / singletons:         1,107
+    → MODERATE cross-strain rate (4.7%) — ambiguous, check per-segment
+
+  EP (Embryo Passage)
+    Total pairs classified:       18,757
+    Both S1133:                    8,523
+    Both DIV (divergent):         10,178
+    CROSS-STRAIN pairs:               56  (0.30%)
+    Unmapped / singletons:            41
+    → LOW cross-strain rate (0.3%) — TWO SEPARATE VIRUSES likely
+
+[INFO] Cross-strain pair details saved: results/cross_strain_pairs.tsv
+[INFO] Total cross-strain pairs across all samples: 839
+
+============================================================
+ANALYSIS 2: Per-Segment Strain Assignment
+============================================================
+For each of ARV's 10 genome segments, what fraction of reads
+mapped to the S1133 reference vs the divergent (DIV) assembly?
+
+Segment       S1133 reads      DIV reads    % S1133  Verdict
+-----------------------------------------------------------------
+  S1               17,244              0     100.0%  S1133-like
+
+Segments predominantly S1133-like: S1
+Segments predominantly divergent:  none
+→ Unclear pattern. Check cross-strain pair rate.
+
+============================================================
+OVERALL CONCLUSION
+============================================================
+
+ONE REASSORTANT VIRUS is likely if:
+  ✓ Cross-strain pair rate in AL isolate > 5%
+  ✓ Different segments assigned to different strains (S1133 vs DIV)
+  ✓ Cross-strain pairs share the same segment in R1 and R2
+    (indicating within-segment recombination, not just co-packaging)
+
+TWO SEPARATE VIRUSES are likely if:
+  ✓ Cross-strain pair rate < 1% (noise level)
+  ✓ All 10 segments map cleanly to ONE strain only
+  ✓ No cross-strain pairs share the same segment
+
+IMPLICATION:
+  If ONE reassortant → original paper may have assembled a
+    single virus's natural genetic diversity into 'two strains'.
+    Plaque purification failed because there was only one virus.
+
+  If TWO separate → original paper's conclusion is correct,
+    and the follow-up question becomes: why did purification fail?

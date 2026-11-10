@@ -1,0 +1,11 @@
+# Large data — rebuilt by running the scripts (raw reads come from week12/data/raw)
+data/
+
+# PBS job logs
+Logs/
+*.o[0-9]*
+*.e[0-9]*
+
+# Stray fastp default report (real reports are in data/stats/)
+fastp.html
+fastp.json
